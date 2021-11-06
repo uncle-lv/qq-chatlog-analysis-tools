@@ -5,6 +5,7 @@ from itertools import groupby
 from message import Message
 
 
+# read data from file
 def readFile(fileName: str) -> List[str]:
     data_list = []
     url = os.path.normpath('./in/' + fileName)
@@ -14,11 +15,14 @@ def readFile(fileName: str) -> List[str]:
     return data_list
 
 
+# filter the unnecessary data
 def filterData(raw_data: List[str]) -> List[str]:
+    # remove the file header
     filtered_data = raw_data[7:]
     return filtered_data
 
 
+# split messages
 def splitMessage(filtered_data: List[str]) -> List[List[str]]:
     message_list = [
         list(v) for k, v in groupby(filtered_data, lambda x: x == '') if not k
@@ -26,6 +30,7 @@ def splitMessage(filtered_data: List[str]) -> List[List[str]]:
     return message_list
 
 
+# transfer messages into Message objects
 def list2Messages(message_list: List[List[str]]) -> List[Message]:
     messages = []
     for item in message_list:
@@ -40,6 +45,7 @@ def list2Messages(message_list: List[List[str]]) -> List[Message]:
     return messages
 
 
+# filter the nontext messages
 def filterNontext(messages: List[Message]) -> List[Message]:
     for message in messages:
         if message.content == '[图片]':

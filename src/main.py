@@ -22,9 +22,11 @@ if __name__ == '__main__':
     content = ' '.join(content_list)
     nickname = ' '.join(nickname_list)
     jieba_content_list = jieba.lcut(content)
+    # this list is used for filter the nickname
     jieba_nikename_list = jieba.lcut(nickname)
     text = ' '.join(jieba_content_list)
 
+    # custom stopword list
     custom_stopwords = []
 
     stopwords = custom_stopwords + jieba_nikename_list
@@ -35,5 +37,6 @@ if __name__ == '__main__':
                              max_words=100,
                              stopwords=stopwords)
 
+    # generate wordcloud
     wc.generate(text)
     wc.to_file('./out/wordcloud.png')
