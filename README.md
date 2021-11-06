@@ -46,8 +46,7 @@ pip install -r requirements.txt
 
 Put your QQ chatlog into floder *in*.
 
-<div align=center><img src="https://cdn.jsdelivr.net/gh/uncle-lv/qq-chatlog-analysis-tools@main/floder_in.png" alt="floder in" style="width: 200px"/></div>
-
+<div align=center><img src="https://cdn.jsdelivr.net/gh/uncle-lv/PicX-image-hosting@main/qq-chatlog-analysis-tools/floder_in.png" alt="floder in" style="width: 200px"/></div>
 
 ### step4
 
@@ -63,8 +62,7 @@ python main.py <filename.txt>
 
 Now, you can check the wordcloud picture in floder *out*.
 
-<div align=center><img src="https://cdn.jsdelivr.net/gh/uncle-lv/qq-chatlog-analysis-tools@main/floder_out.png" alt="floder in" style="width: 200px"/></div>
-
+<div align=center><img src="https://cdn.jsdelivr.net/gh/uncle-lv/PicX-image-hosting@main/qq-chatlog-analysis-tools/floder_out.png" alt="floder in" style="width: 200px"/></div>
 
 ## Contributions
 
